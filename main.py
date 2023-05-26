@@ -29,7 +29,11 @@ my_cur = my_cnx.cursor()
 my_catalog = my_cur.fetchall()
 
 df = pandas.DataFrame(my_catalog)
-streamlit.write(df)
+#TEST 1.1 streamlit.write(df)
+
+color_list = df[0].values.tolist()
+print(color_list)
+
 
 ## CONNECTION TEST
 #my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(),CURRENT_REGION()")
