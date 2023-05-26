@@ -26,7 +26,7 @@ my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 
 # Creating a catalog with data from snowflake
-my_catalog = my_cure.fetchall()
+my_catalog = my_cur.fetchall()
 
 df = pandas.DataFrame(my_catalog)
 streamlit.write(df)
