@@ -30,7 +30,7 @@ my_cur.execute("select color_or_style from catalog_for_website")
 my_catalog = my_cur.fetchall()
 
 df = pandas.DataFrame(my_catalog)
-TEST 1.1 streamlit.write(df)
+streamlit.write(df)
 
 color_list = df[0].values.tolist()
 print(color_list)
